@@ -1,4 +1,7 @@
 names = ['Hari', 'bala', 'gobi','jp']
+ages= [23,23,23,26]
 
-console.log(names);
-console.log('Hello');
+
+module.exports = {
+    studentname:names,ages
+}
