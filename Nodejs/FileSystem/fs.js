@@ -3,7 +3,7 @@
 
 const fs =require ('fs');
 
-// // mkdir
+// mkdir
 
 if ( ! fs.existsSync('./docs') )
     
@@ -30,6 +30,7 @@ fs.writeFile ('./docs/file.txt','Hello World!' ,(err) => {
 })
 
 //// Read file
+
 if(fs.existsSync('./docs/file.txt'))
 {
     fs.readFile ('./docs/file.txt', (err, data) => {
@@ -52,4 +53,16 @@ if(fs.existsSync('./docs/file.txt'))
             console.log('File Deleted');
             
     });
+}
+
+// folder Delete
+
+if(fs.existsSync('./docs'))
+{
+fs.rmdir('./docs' ,(err) => {
+    if(err)
+        console.log(err.message);
+    else 
+        console.log('Folder Deleted');        
+})
 }
