@@ -1,6 +1,5 @@
 // File System
 
-const { log } = require('console');
 const fs =require ('fs');
 
 // mkdir
@@ -16,3 +15,4 @@ if ( ! fs.existsSync('./docs') )
             console.log('Folder Created');    
     })
 }
+
