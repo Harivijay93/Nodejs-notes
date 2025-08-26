@@ -5,8 +5,9 @@ const server= http.createServer((req, res)=>{
     console.log(req.url);
     console.log(req.method);
 
-    res.setHeader('Content','text/plain');
-    res.write('Say hi to hari');
+    res.setHeader('Content','text/html');
+    res.write('<h1>Say hi to hari</h1>');
+    res.write('<h4>Obey The Order</h4>');
     res.end();
     
 });
