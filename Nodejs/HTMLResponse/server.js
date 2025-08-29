@@ -7,7 +7,7 @@ const server= http.createServer((req, res)=>{
     fs.readFile('./index.html', (err, data) =>{
         if(err){
             console.log(err.message);
-            
+            res.end();
         }
         else {
             res.write(data);
@@ -19,4 +19,5 @@ const server= http.createServer((req, res)=>{
 
 server.listen(3000, 'localhost', ()=>{
     console.log('Server is listening');    
+
 })
