@@ -10,8 +10,7 @@ const server= http.createServer((req, res)=>{
             res.end();
         }
         else {
-            res.write(data);
-            res.end();
+            res.end(data);
         }
     })
     
@@ -21,3 +20,4 @@ server.listen(3000, 'localhost', ()=>{
     console.log('Server is listening');    
 
 })
+
